@@ -1,0 +1,24 @@
+{
+  "name": "testingframework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --no-timeouts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/belensantacruz/TestingFramework.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/belensantacruz/TestingFramework/issues"
+  },
+  "homepage": "https://github.com/belensantacruz/TestingFramework#readme",
+  "dependencies": {
+    "chai": "^4.3.6",
+    "mocha": "^10.0.0",
+    "selenium-webdriver": "^4.3.1"
+  }
+}
