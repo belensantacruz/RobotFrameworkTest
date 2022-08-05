@@ -18,10 +18,10 @@ const should = require('chai').should();
 // };
 
 //describe block
-describe("First Test - Login page", function(){
+describe("Second Test - Login page", function(){
     var driver;
     beforeEach(function(){
-         //Launch the browser
+        //Launch the browser
         // caps.name = this.currentTest.title;
         // driver = buildDriver(caps);
         driver = new Builder().forBrowser('chrome').build();
@@ -30,6 +30,7 @@ describe("First Test - Login page", function(){
         //Close driver
         await driver.quit();
     });
+    
     //it block
     it("First Test - Login and check navigation to products", async function(){
         //Navigate to our application
@@ -42,5 +43,18 @@ describe("First Test - Login page", function(){
         });
         //Assert using chai assertion (should)
         title.should.equal("PRODUCTS");
+    });
+    //it block
+    it("Second Test - Adding new test", async function(){
+        //Navigate to our application
+        await driver.get("http://www.saucedemo.com");
+        //Add a To Do
+        await driver.findElement(By.id("user-name")).sendKeys("standard_user", Key.TAB);
+        await driver.findElement(By.id("password")).sendKeys("secret_sauce", Key.RETURN);
+        var title = await driver.findElement(By.xpath("//span[contains(@class, 'title')]")).getText().then(function(value){
+            return value;
+        });
+        //Assert using chai assertion (should)
+        title.should.equal("Something");
     });
 });

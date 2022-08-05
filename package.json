@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --no-timeouts"
+    "test": "mocha --no-timeouts --parallel --reporter mochawesome --require mochawesome/register --reporter-options reportDir=C:/Users/belen.santacruz/Desktop/TestingFramework/TestReport,reportFilename=TestResult"
   },
   "repository": {
     "type": "git",
@@ -18,7 +18,9 @@
   "homepage": "https://github.com/belensantacruz/TestingFramework#readme",
   "dependencies": {
     "chai": "^4.3.6",
+    "cypress": "^10.3.1",
     "mocha": "^10.0.0",
+    "mochawesome": "^7.1.3",
     "selenium-webdriver": "^4.3.1"
   }
 }

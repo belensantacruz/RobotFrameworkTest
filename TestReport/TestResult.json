@@ -1,0 +1,242 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 3,
+    "passes": 2,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-08-01T20:18:20.978Z",
+    "end": "2022-08-01T20:18:25.753Z",
+    "duration": 4775,
+    "testsRegistered": 3,
+    "passPercent": 66.66666666666666,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "192e204f-73a5-40b1-829a-16c7ae931f59",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "21805ebc-975c-4ad8-b6e1-27e9dd0483e9",
+          "title": "First Test - Login page",
+          "fullFile": "C:\\Users\\belen.santacruz\\Desktop\\TestingFramework\\test\\FirstTest.js",
+          "file": "\\test\\FirstTest.js",
+          "beforeHooks": [
+            {
+              "title": "\"before each\" hook in \"First Test - Login page\"",
+              "fullTitle": "First Test - Login page \"before each\" hook in \"First Test - Login page\"",
+              "timedOut": null,
+              "duration": 10,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": null,
+              "context": null,
+              "code": "//Launch the browser\n        // caps.name = this.currentTest.title;\n        // driver = buildDriver(caps);\n        driver = new Builder().forBrowser('chrome').build();",
+              "err": {},
+              "uuid": "19bf917e-d675-4f6b-aae5-4abc2b58e92d",
+              "parentUUID": null,
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after each\" hook in \"First Test - Login page\"",
+              "fullTitle": "First Test - Login page \"after each\" hook in \"First Test - Login page\"",
+              "timedOut": null,
+              "duration": 63,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": null,
+              "context": null,
+              "code": "//Close driver\nawait driver.quit();",
+              "err": {},
+              "uuid": "e7dd55f5-bf2b-4c86-a3ed-328194a3d0d1",
+              "parentUUID": null,
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "First Test - Login and check navigation to products",
+              "fullTitle": "First Test - Login page First Test - Login and check navigation to products",
+              "timedOut": null,
+              "duration": 2132,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Navigate to our application\nawait driver.get(\"http://www.saucedemo.com\");\n//Add a To Do\nawait driver.findElement(By.id(\"user-name\")).sendKeys(\"standard_user\", Key.TAB);\nawait driver.findElement(By.id(\"password\")).sendKeys(\"secret_sauce\", Key.RETURN);\nvar title = await driver.findElement(By.xpath(\"//span[contains(@class, 'title')]\")).getText().then(function(value){\n    return value;\n});\n//Assert using chai assertion (should)\ntitle.should.equal(\"PRODUCTS\");",
+              "err": {},
+              "uuid": "7106bf96-2b4b-4218-adb7-b385afce117e",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "7106bf96-2b4b-4218-adb7-b385afce117e"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2132,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": null
+        },
+        {
+          "uuid": "339b5c8b-b920-40e6-bfb0-6479f8ab20cb",
+          "title": "Second Test - Login page",
+          "fullFile": "C:\\Users\\belen.santacruz\\Desktop\\TestingFramework\\test\\SecondTest.js",
+          "file": "\\test\\SecondTest.js",
+          "beforeHooks": [
+            {
+              "title": "\"before each\" hook in \"Second Test - Login page\"",
+              "fullTitle": "Second Test - Login page \"before each\" hook in \"Second Test - Login page\"",
+              "timedOut": null,
+              "duration": 7,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": null,
+              "context": null,
+              "code": "//Launch the browser\n// caps.name = this.currentTest.title;\n// driver = buildDriver(caps);\ndriver = new Builder().forBrowser('chrome').build();",
+              "err": {},
+              "uuid": "a6e0c305-5208-4e2b-90bb-7aca50cbb5c6",
+              "parentUUID": null,
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after each\" hook in \"Second Test - Login page\"",
+              "fullTitle": "Second Test - Login page \"after each\" hook in \"Second Test - Login page\"",
+              "timedOut": null,
+              "duration": 43,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": null,
+              "context": null,
+              "code": "//Close driver\nawait driver.quit();",
+              "err": {},
+              "uuid": "f8511348-1352-4c02-a392-c1e8f6ba6725",
+              "parentUUID": null,
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "First Test - Login and check navigation to products",
+              "fullTitle": "Second Test - Login page First Test - Login and check navigation to products",
+              "timedOut": null,
+              "duration": 2036,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Navigate to our application\nawait driver.get(\"http://www.saucedemo.com\");\n//Add a To Do\nawait driver.findElement(By.id(\"user-name\")).sendKeys(\"standard_user\", Key.TAB);\nawait driver.findElement(By.id(\"password\")).sendKeys(\"secret_sauce\", Key.RETURN);\nvar title = await driver.findElement(By.xpath(\"//span[contains(@class, 'title')]\")).getText().then(function(value){\n    return value;\n});\n//Assert using chai assertion (should)\ntitle.should.equal(\"PRODUCTS\");",
+              "err": {},
+              "uuid": "0361a5cb-a0e0-41b5-84b5-a986093c7bf1",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Second Test - Adding new test",
+              "fullTitle": "Second Test - Login page Second Test - Adding new test",
+              "timedOut": null,
+              "duration": 2126,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "//Navigate to our application\nawait driver.get(\"http://www.saucedemo.com\");\n//Add a To Do\nawait driver.findElement(By.id(\"user-name\")).sendKeys(\"standard_user\", Key.TAB);\nawait driver.findElement(By.id(\"password\")).sendKeys(\"secret_sauce\", Key.RETURN);\nvar title = await driver.findElement(By.xpath(\"//span[contains(@class, 'title')]\")).getText().then(function(value){\n    return value;\n});\n//Assert using chai assertion (should)\ntitle.should.equal(\"Something\");",
+              "err": {
+                "message": "AssertionError: expected 'PRODUCTS' to equal 'Something'",
+                "estack": "AssertionError: expected 'PRODUCTS' to equal 'Something'\n    at Context.<anonymous> (test\\SecondTest.js:58:22)\n    at processTicksAndRejections (internal/process/task_queues.js:95:5)",
+                "diff": "- PRODUCTS\n+ Something\n"
+              },
+              "uuid": "00ebad0f-086d-4e8f-83f8-67a6ab57a176",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "0361a5cb-a0e0-41b5-84b5-a986093c7bf1"
+          ],
+          "failures": [
+            "00ebad0f-086d-4e8f-83f8-67a6ab57a176"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 4162,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": null
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 0
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "10.0.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "TestResult",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "C:/Users/belen.santacruz/Desktop/TestingFramework/TestReport",
+        "reportFilename": "TestResult"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
